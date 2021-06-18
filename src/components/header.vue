@@ -8,7 +8,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
-        <li v-for="(item,i) in menu" :key="i" class="nav-item active nav-link">
+        <li v-for="(item,i) in menu" :key="i" @click="close" class="nav-item active nav-link">
           <router-link :to="menu[i].link" class="text-dark">{{menu[i].title}}</router-link>
         </li>
       </ul>
@@ -42,6 +42,11 @@ export default {
                 {title:'qa',link:'/qa'},
             ]
         }
+    },
+    methods:{
+      close:function(){
+        document.getElementById("navbarNav").classList.remove("show")
+      }
     }
 }
 </script>

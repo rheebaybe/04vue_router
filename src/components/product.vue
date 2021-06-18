@@ -6,7 +6,7 @@
      <div class="row">
           <div class="col-sm-6 col-md-3 text-center mb-3" v-for="(item,i) in pdata" :key="i">
             <img :src="pdata[i].image" alt="" class="w-100 mb-2">
-            <p class="data-title">{{pdata[i].title}}</p>
+            <div @click="$emit('pOpen',pdata[i].id)" class="data-title">{{pdata[i].title}}</div>
             <p class="font-italic">{{pdata[i].price}} KRW</p>
           </div>
         </div>
