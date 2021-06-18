@@ -1,11 +1,29 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import Home from '../views/Home.vue'
+import { createRouter, createWebHistory } from 'vue-router';
+import home from '../components/home.vue'
+import company from '../components/company.vue'
+import product from '../components/product.vue'
+import qa from '../components/qa.vue'
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    name: 'home',
+    component: home
+  },
+  {
+    path: '/company',
+    name: 'company',
+    component: company
+  },
+  {
+    path: '/product',
+    name: 'product',
+    component: product
+  },
+  {
+    path: '/qa',
+    name: 'qa',
+    component: qa
   },
   {
     path: '/about',
@@ -19,7 +37,7 @@ const routes = [
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  routes
+  routes,
 })
 
-export default router
+export default router;
